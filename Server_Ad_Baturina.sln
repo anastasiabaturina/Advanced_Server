@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server_Ad_Baturina", "Server_Ad_Baturina\Server_Ad_Baturina.csproj", "{EF65C074-024B-4BDD-A746-98BCD4C93259}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server_Ad_Baturina.Tests", "Server_Ad_Baturina.Tests\Server_Ad_Baturina.Tests.csproj", "{9A67B477-F44A-464F-9C88-08FD2373CF96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EF65C074-024B-4BDD-A746-98BCD4C93259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF65C074-024B-4BDD-A746-98BCD4C93259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF65C074-024B-4BDD-A746-98BCD4C93259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A67B477-F44A-464F-9C88-08FD2373CF96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A67B477-F44A-464F-9C88-08FD2373CF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A67B477-F44A-464F-9C88-08FD2373CF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A67B477-F44A-464F-9C88-08FD2373CF96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
