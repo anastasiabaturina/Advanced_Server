@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16.1
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+    ports:
+       - "1111:5432"
+    volumes:
+     - postgres_data:/var/lib/postgresql/data
+
+  server_ad_baturina:
+    image: ${DOCKER_REGISTRY-}serveradbaturina
+    build:
+      context: Server_Ad_Baturina
+      dockerfile: Dockerfile
+    ports:
+      - "5008:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development 
+      - DATABASE=${DATABASE}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_LIFETIME=${JWT_LIFETIME}
+      - JWT_ISSUER=${JWT_ISSUER}
+      - JWT_AUDIENCE=${JWT_AUDIENCE} 
+    depends_on:
+      - postgres 
+
+volumes:
+  postgres_data:
+   driver: local  
