@@ -65,7 +65,6 @@ public class AuthService : IAuthService
         }
 
         var signInResponse = _mapper.Map<SignInUserResponse>(user);
-        signInResponse.Avatar = $"{_contextAccessor.HttpContext.Request.Scheme}://{_contextAccessor.HttpContext.Request.Host}/api/v1/files/{user.Avatar}";
         signInResponse.Token = GenerateToken(user.Id);
 
         return signInResponse;

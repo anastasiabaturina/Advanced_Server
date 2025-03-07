@@ -398,3 +398,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Server_Ad_Baturina/.env
+*.env
+/Server_Ad_Baturina/.env
+*.json
