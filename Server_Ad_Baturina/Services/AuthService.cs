@@ -21,6 +21,7 @@ public class AuthService : IAuthService
     private readonly IPasswordHasher<UserEntity> _passwordHasher;
     private readonly IMapper _mapper;
     private readonly IHttpContextAccessor _contextAccessor;
+
     public AuthService(IUserRepository userRepository, IPasswordHasher<UserEntity> passwordHasher, IMapper mapper, IHttpContextAccessor contextAccessor)
     {
         _userRepository = userRepository;
@@ -28,6 +29,7 @@ public class AuthService : IAuthService
         _mapper = mapper;
         _contextAccessor = contextAccessor;
     }
+
     public async Task<SignInUserResponse> RegisterAsync(
         RegisterUserDto registerUserDto, 
         CancellationToken cancellationToken)
@@ -75,6 +77,7 @@ public class AuthService : IAuthService
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Env.GetString("JWT")));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
         var claims = new[]
         {
             new Claim(ClaimTypes.NameIdentifier, id.ToString()),

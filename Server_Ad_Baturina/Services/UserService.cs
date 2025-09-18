@@ -17,7 +17,6 @@ public class UserService : IUserService
         _mapper = mapper;
     }
 
-
     public async Task<List<PublicUserResponse>> GetAllAsync(CancellationToken cancellationToken)
     {
         var listUsers = await _userRepository.GetAllAsync(cancellationToken);
