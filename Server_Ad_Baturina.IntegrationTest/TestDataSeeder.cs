@@ -54,7 +54,7 @@ public static class TestDataSeeder
 
         var news1 = new NewsEntity
         {
-            Id = Guid.NewGuid(),
+            Id = new Guid("b5c6d7e8-f9a0-1234-bcde-f56789012345"),
             Title = "Breaking News",
             Description = "Something big happened today.",
             Image = null,
@@ -65,7 +65,7 @@ public static class TestDataSeeder
 
         var news2 = new NewsEntity
         {
-            Id = Guid.NewGuid(),
+            Id = new Guid("a1b2c3d4-e5f6-7890-abcd-ef1234567890"),
             Title = "Sports Update",
             Description = "Latest sports results.",
             Image = null,
